@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="true"
+        backupStaticAttributes="false"
+        bootstrap="./core/tests/bootstrap.php"
+        colors="true"
+        processIsolation="false"
+        verbose="false">
+    <listeners>
+        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
+            <arguments>
+                <array>
+                    <element key="slowThreshold">
+                        <integer>500</integer>
+                    </element>
+                    <element key="reportLength">
+                        <integer>20</integer>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+    </listeners>
+    <testsuites>
+        <testsuite name="Core Tests">
+            <directory>./core/tests</directory>
+        </testsuite>
+        <testsuite name="HomePage Tests">
+            <directory>./apps/HomePage/tests</directory>
+        </testsuite>
+        <testsuite name="ErrorHandler Tests">
+            <directory>./apps/ErrorHandler/tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./apps/*/src</directory>
+            <directory suffix=".php">./core/src</directory>
+        </whitelist>
+        <blacklist>
+            <directory suffix=".php">vendor</directory>
+        </blacklist>
+    </filter>
+    <php>
+        <ini name="memory_limit" value="-1"/>
+        <ini name="date.timezone" value="Europe/London"/>
+        <ini name="error_reporting" value="E_ALL"/>
+    </php>
+
+    <logging>
+        <log type="junit" target="./build/reports/test-results.xml"/>
+    </logging>
+</phpunit>

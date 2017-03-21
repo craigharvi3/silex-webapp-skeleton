@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="" lang="{{locale.getCurrentLocale()}}-GB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="{% block meta_description %}A simple, scalable and pretty beautiful silex skeleton for writing web applications{% endblock %}" />
+    <meta name="keywords" content="{% block meta_keywords %}silex, skeleton{% endblock %}" />
+    <title>{% block full_title %}Silex Webapp Skeleton {% block title %}{% endblock %}{% endblock %}</title>
+    {% block css %}
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+    	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    {% endblock %}
+</head>
+<body class="">
+
+    <header>
+        <a href="/" class="logo">
+            Silex Webapp Skeleton
+        </a>
+
+        <p>Woohooo!</p>
+    </header>
+
+    {% block contents %}
+
+    {% endblock %}
+
+</body>
+</html>

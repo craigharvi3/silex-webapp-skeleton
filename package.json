@@ -1,0 +1,22 @@
+{
+  "name": "silex-webapp-skeleton",
+  "version": "0.0.1",
+  "description": "A simple, scalable and pretty beautiful silex skeleton for writing web applications",
+  "private": false,
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "karma start",
+    "sass": "gulp sass"
+  },
+  "author": "Craig Harvie",
+  "license": "MIT"
+}
